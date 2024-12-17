@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class BossController : MonoBehaviour
 {
-    [SerializeField] private GameObject ToxicArea;
+    [SerializeField] private GameObject toxicCloud;
     [SerializeField] private PlayerController Player;
+    [SerializeField] private GameObject projectilePrefab; // Prefab del proyectil
+    [SerializeField] private Transform firePoint; // Punto desde donde dispara el jefe
 
+   
     public float currentHealth;
     private float maxHealth = 200;
     
@@ -63,6 +66,37 @@ public class BossController : MonoBehaviour
         currentState = newState;
         currentState.Entry();
     }    
+
+     // Método para obtener la posición del jugador
+    public Vector2 GetPlayerPosition()
+    {
+        return Player.transform.position;
+    }
+
+    // Método para obtener el prefab del proyectil
+    public GameObject GetProjectilePrefab()
+    {
+        return projectilePrefab;
+    }
+
+    // Método para obtener el punto de disparo
+    public Transform GetFirePoint()
+    {
+        return firePoint;
+    }
+
+    // Método para activar la nube tóxica
+    public void ActivateToxicArea(bool isActive)
+{
+    if (toxicCloud != null)
+    {
+        toxicCloud.SetActive(isActive);
+    }
+    else
+    {
+        Debug.LogWarning("Toxic Cloud object not assigned!");
+    }
+}
 }
 
 public enum States

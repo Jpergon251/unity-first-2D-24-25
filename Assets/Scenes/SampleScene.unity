@@ -11946,6 +11946,14 @@ PrefabInstance:
       propertyPath: ToxicArea
       value: 
       objectReference: {fileID: 248195346127487389}
+    - target: {fileID: 1774373112110196403, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
+      propertyPath: toxicCloud
+      value: 
+      objectReference: {fileID: 248195346127487389}
+    - target: {fileID: 1774373112110196403, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 2451023886133648582, guid: 997b71f233d4ccf48985c5f690530a29, type: 3}
     - target: {fileID: 4227307048293196948, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
       propertyPath: m_Name
       value: Death
